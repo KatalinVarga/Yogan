@@ -6,12 +6,11 @@
     border: 0;
 }
 .container{
-    width: 100%;
-   /* max-width:  1200px; */
+    width: auto;
+  
     margin: 0 auto;
     background-color: #ebecee;
-   /* border-left: 370px solid #ebecee;
-    border-right: 350px solid #ebecee;*/
+  
 }
 
 header{
@@ -21,18 +20,20 @@ header{
     display: flex;
     flex-direction: row;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-evenly;
       background-color:#292b38;
+    
     
     }
 
 
+
 .menu{
-    margin: 240px;
+ 
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:center;
 }
 
 .menu > li{
@@ -48,6 +49,7 @@ header{
 .menu>li> a {
     text-decoration: none;
     font-family: 'Comfortaa', sans-serif;
+    justify-content: center;
   
 }
 
@@ -55,23 +57,21 @@ header{
  padding-left: 200px;
   
 }
-#coralBand{
-    background-color: #f8605a;
-}
+
 .banner{
     display: flex;
     flex-direction: row;
     justify-content: center;
     color: #292b38;
    max-width: 1200px;
-   padding-left: 370px;
+   margin-left: 350px;
 }
 
 .title{
-    padding-left: 100px;
-    padding-right: 50px;
     display: flex;
     flex-direction: column;
+   padding-right: 40px;
+  
 }
 .brandName{
     display: flex;
@@ -95,28 +95,31 @@ h2{
 }
 h3 > a{
     text-decoration: none;
-   padding: 10px;
+   padding: 20px 10px;
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
     font-size: 32px;
     color: #292b38;
 
 }
-#bottles >img {
+
+#bottles  {
+
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 500px;
-    width: 50%;
+  
+
+    width: 30%;
     height:auto;
     
 
 }
 .slogan{
     padding-top:30px;
-    padding-right: 200px;
-       display: flex;
+padding-left: 130px;
+    display: flex;
     flex-direction: column;
     text-align:center;
+    justify-content: center;
    
 
 }
@@ -138,6 +141,12 @@ h6{
     color: #292b38;;
     font-size: 30px;
 }
+
+.coralBand{
+    background-color: #f8605a;
+    justify-content: center;
+}
+
 .yoganShowReel{
     display: flex;
     flex-direction:row;
@@ -146,7 +155,7 @@ h6{
 .yoganShowReel{
     background-color: #f8605a;
   max-width: 1200px;
-  padding-left: 370px;
+ margin-left: 350px;
   
 }
 .yoganShowReel > img{
@@ -160,30 +169,57 @@ h6{
     background-color: #FCE4C5;
 }
 .splitIntoThirds{
-    display: flex;
+   display: flex;
     flex-direction: row;
-   
+    margin-left: 350px;
     max-width: 1200px;
 }
-
-#lady{
-    padding-top:20px;
-    padding-bottom: 20px;
-    padding-left: 390px;
-    width: auto;
-    height: 500px;
-
+#wrapImage{
+    float: left;
 }
-
+#lady{
+    padding-top:50px;
+    padding-left: 20px;
+    margin-right: 20px;
+    
+    width: 300px;
+  
+    height:  auto;
+   float:left;
+ 
+}
+.subHeading{
+    color:#292929;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+   text-align: left;
+         text-justify:auto;
+         margin-top: 50px;
+         margin-left:20px;
+       
+}
+.mainText {
+    color: #292929;
+    margin-left: 20px;
+   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Comfortaa', sans-serif;
+       font-size: 16px;
+     text-justify: auto;
+     text-align: justify;
+   line-height: 1.8;
+    
+}
 .ResourcesImageHolder{
     display: flex;
     flex-direction: row;
+   
 }
 .resources{
     display: flex;
     flex-direction: row;
-    
-    padding-left: 100px;
     padding-top: 30px;
     padding-bottom: 20px;
     justify-content: center;
@@ -212,17 +248,50 @@ h6{
     
 }
 
-.mainText {
-    color: #292929;
-    padding-left: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+
+
+   
+
+.greyZone{
+
+   background-color: #454a62;
+   
+}
+.splitIntoHalves{    /*this further division within the grey area was needed to be able to have backgound-colour at full width but constraining the content's width*/
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin-left:350px;
+}
+.subHeading2{
+    color: #ebecee;
     font-family: 'Comfortaa', sans-serif;
-       font-size: 20px;
-     text-justify: auto;
+    font-size: 24px;
+    font-weight: bold;
+   text-align: left;
+         text-justify:auto;
+         padding-top: 50px;
+}
+.recyclablePackagingText {
+    
+    
+    line-height: 1.8;
+   word-wrap: keep-all;
+   font-family: 'Comfortaa', sans-serif;
+   font-size: 16px;
+    color: #ebecee;
+    text-align: justify;
+    text-justify:auto;
    
 }
 
+#glassJar{
+   padding-left: 100px;
+    width:auto;
+    height: 500px;
+    
+
+}
 
 
 
