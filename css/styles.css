@@ -7,29 +7,33 @@
 }
 .container{
     width: auto;
-  
     margin: 0 auto;
     background-color: #ebecee;
   
 }
 
 header{
-    height: 70px ;
+    height: 3% ;
     width: 100%;
     margin: 0px;
     display: flex;
     flex-direction: row;
-    align-items:center;
-    justify-content:space-evenly;
-      background-color:#292b38;
-    
-    
-    }
+  
+    background-color:#292b38;
+     }
 
+nav{
+    
+    justify-content: center;
+   margin-left:12.5%;
+   align-items:center;
+   max-width: 100%;
+
+}
 
 
 .menu{
- 
+    justify-content:center;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -37,12 +41,12 @@ header{
 }
 
 .menu > li{
-    max-width:  800px;
+  
     padding: 10px 20px;
    
     color:#ebecee;
     font-size: 18px;
-    text-align: right;
+    text-align: left;
 
     
 }
@@ -52,9 +56,14 @@ header{
     justify-content: center;
   
 }
+.menu > li  a:hover{
+   
+    color:#B1B7BE;
+    
+ }
 
 #shop{
- padding-left: 200px;
+ padding-left: 8.3%;
   
 }
 
@@ -63,8 +72,8 @@ header{
     flex-direction: row;
     justify-content: center;
     color: #292b38;
-   max-width: 1200px;
-   margin-left: 350px;
+   max-width: 75%;
+   margin-left: 12.5%;
 }
 
 .title{
@@ -97,51 +106,42 @@ h3 > a{
     text-decoration: none;
    padding: 20px 10px;
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
     font-size: 32px;
     color: #292b38;
 
 }
+h3 > a:hover {
+   
+  font-weight: bolder;
+}
 
 #bottles  {
-
     padding-top: 20px;
     padding-bottom: 20px;
-  
-
-    width: 30%;
+    width:25%;
     height:auto;
-    
+    }
 
-}
-.slogan{
-    padding-top:30px;
-padding-left: 130px;
+h4 > a {
+    padding-top:130px;
+    padding-left: 130px;
     display: flex;
     flex-direction: column;
     text-align:center;
     justify-content: center;
-   
-
-}
-h4{
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
     color: #292b38;
     font-size: 30px;
+    font-weight: lighter;
+    text-decoration: none;
     
 }
 
-h5{
-    padding-left: 20px;
-    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
- color: #292b38;;
-    font-size: 30px;
-}
-h6{
-    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-    color: #292b38;;
-    font-size: 30px;
-}
 
+ h4 > a:hover {
+    font-weight: bolder;
+}
 .coralBand{
     background-color: #f8605a;
     justify-content: center;
@@ -154,25 +154,25 @@ h6{
 }
 .yoganShowReel{
     background-color: #f8605a;
-  max-width: 1200px;
- margin-left: 350px;
+  max-width: 75%;
+  margin-left: 12.5%;;
   
 }
 .yoganShowReel > img{
-    background-color: #f8605a;
+        background-color: #f8605a;
         padding:20px;
         padding-bottom: 50px;
-    width: 30%;
-    height: auto;
+        width: 30%;
+        height: auto;
 }
-#mustardBand{
+#beigeBand{
     background-color: #FCE4C5;
 }
 .splitIntoThirds{
    display: flex;
     flex-direction: row;
-    margin-left: 350px;
-    max-width: 1200px;
+    margin-left: 12.5%;;
+    max-width: 75%;
 }
 #wrapImage{
     float: left;
@@ -189,15 +189,21 @@ h6{
  
 }
 .subHeading{
+    margin-top: 50px;
+    margin-left:20px;
+}
+.subHeading > a{
     color:#292929;
     font-family: 'Comfortaa', sans-serif;
     font-size: 24px;
-    font-weight: bold;
+    
    text-align: left;
-         text-justify:auto;
-         margin-top: 50px;
-         margin-left:20px;
+    text-justify:auto; 
+    text-decoration: none;
        
+}
+.subHeading > a:hover {
+    font-weight: bolder;
 }
 .mainText {
     color: #292929;
@@ -212,40 +218,66 @@ h6{
    line-height: 1.8;
     
 }
-.ResourcesImageHolder{
-    display: flex;
-    flex-direction: row;
-   
+.mainText >a{
+    color: #292929;
+    margin-left: 30px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Comfortaa', sans-serif;
+       font-size: 16px;
+     text-justify: auto;
+     text-align: justify;
+   line-height: 1.8;
+   text-decoration: none;
+    
 }
-.resources{
-    display: flex;
-    flex-direction: row;
-    padding-top: 30px;
+.mainText > a:hover{
+    font-weight: bold;
+    color:#27383F;
+}
+.ResourcesImageHolder{
+    float: right;
+     padding-top: 50px;
     padding-bottom: 20px;
     justify-content: center;
-}
-#almonds{
-    padding-top:20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    width: auto;
-    height: 200px;
-   
+    margin-left: 30px;
 }
 #soyBean{
-    padding-top:80px;
-    padding-bottom: 20px;
-   padding-left: 20px;
+    padding:20px;
     width: auto;
-    height: 200px;
+    height: 150px;
+   
+}
+#nuts{
+    padding:20px;
+        width: auto;
+    height: 150px;
     
 }
-#cashews{
-   padding-top:20px;
-    padding-left: 100px;
+#coconutHalves{
+    padding:20px;
+  
     width: auto;
-    height: 200px;
+    height: 150px;
     
+}
+#groundNuts{
+    padding:20px;
+        width: auto;
+    height: 150px;
+}
+#cashewMilk{
+    padding:20px;
+    width: auto;
+    height: 150px;
+
+}
+#coconutYoghurt{
+    padding:20px;
+ 
+    width: auto;
+    height: 150px;
 }
 
 
@@ -254,23 +286,24 @@ h6{
 
 .greyZone{
 
-   background-color: #454a62;
+   background-color: #ebecee;
    
 }
 .splitIntoHalves{    /*this further division within the grey area was needed to be able to have backgound-colour at full width but constraining the content's width*/
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
-    margin-left:350px;
+    max-width: 75%;
+    margin-left: 12.5%;;
 }
 .subHeading2{
-    color: #ebecee;
+    color:#292b38;
     font-family: 'Comfortaa', sans-serif;
     font-size: 24px;
-    font-weight: bold;
+ 
    text-align: left;
          text-justify:auto;
          padding-top: 50px;
+         margin-left:20px;
 }
 .recyclablePackagingText {
     
@@ -279,10 +312,21 @@ h6{
    word-wrap: keep-all;
    font-family: 'Comfortaa', sans-serif;
    font-size: 16px;
-    color: #ebecee;
+    color: #292b38;
     text-align: justify;
     text-justify:auto;
+    margin-left:20px;
    
+}
+.recyclablePackagingText > a {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+     color: #292b38;
+     text-decoration: none;
+}
+.recyclablePackagingText > a:hover {
+   font-weight: bold;
+   color:#27383F;
 }
 
 #glassJar{
@@ -292,6 +336,362 @@ h6{
     
 
 }
+footer {
+        background-color:#292b38;
+        flex-direction: row;
+        justify-content: center;
+      
+     
+          }
+  .footerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    max-width: 75%;
+    margin-left: 12.5%;
+    color:#ebecee;
+    font-size: 16px;
+    padding-bottom: 20px;
+    text-decoration:none ;
+   
+  }
+
+.contactDetails{
+    font-family: 'Comfortaa', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+  padding-top: 50px;
+  padding-right: 50px;
+     color:#ebecee;
+   
+
+}
+.contactDetails>a{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+    
+}
+.contactDetails>a:hover{
+    font-weight: bold;
+    color:#B1B7BE;
+}
+.map{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom:20px;
+    text-align: left;
+    padding-top: 50px;
+ 
+ 
+}
+.mapouter{
+    padding-bottom:50px;
+}
+#socialLinksText{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+  
+}
+.socialMediaLinks{
+    list-style: none;
+    font-size: 30px;
+    padding-top:50px;
+    padding-left:20px;
+    line-height: 1.8;
+    
+}
+
+
+.float {
+    float: left;
+    padding:5px;
+    padding-left:30px;
+}
+
+.float:hover{
+    font-size: 35px;
+    
+}
+
+@media only screen and (max-width: 600px) { 
+
+    .menu > li{
+  
+        padding: 5px 10px;
+       
+        color:#ebecee;
+        font-size: 10px;
+        text-align: left;
+    
+        
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+       padding-right: 20px;
+      
+    }
+     
+    h1{
+        padding:10px 5px;
+        font-family: 'Bungee', Arial, Helvetica, sans-serif;
+        font-size: 21px;
+        color: #f8605a;
+    }
+    h2{
+        padding:10px 5px;
+        font-family: 'Bungee Outline', Arial, Helvetica, sans-serif;
+        font-size: 21px;
+        color: #292b38;
+    }
+    h3 > a{
+        text-decoration: none;
+       padding: 10px 5px;
+        font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        font-size: 18px;
+        color: #292b38;
+    
+    }
+     #bottles  {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width:25%;
+        height:auto;
+        }
+    
+    h4 > a {
+        padding-top:65px;
+        padding-left: 65px;
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+        color: #292b38;
+        font-size: 15px;
+        font-weight: lighter;
+        text-decoration: none;
+        
+    }
+    .yoganShowReel > img{
+        background-color: #f8605a;
+        padding:10px;
+        padding-bottom: 25px;
+        width: 30%;
+        height: auto;
+}   
+#lady{
+    padding-top:25px;
+    padding-left: 10px;
+    margin-right: 10px;
+    
+    width: 150px;
+  
+    height:  auto;
+   float:left;
+ 
+}
+.subHeading{
+    margin-top: 25px;
+    margin-left:10px;
+}
+.subHeading > a{
+    color:#292929;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 12px;
+    
+   text-align: left;
+    text-justify:auto; 
+    text-decoration: none;
+       
+}
+.mainText {
+    color: #292929;
+    margin-left: 10px;
+   
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Comfortaa', sans-serif;
+       font-size: 8px;
+     text-justify: auto;
+     text-align: justify;
+   line-height: 0.9;
+    
+}
+.mainText >a{
+    color: #292929;
+    margin-left: 15px;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Comfortaa', sans-serif;
+       font-size: 8px;
+     text-justify: auto;
+     text-align: justify;
+   line-height: 0.9;
+   text-decoration: none;
+    
+}
+.ResourcesImageHolder{
+    float: right;
+     padding-top: 25px;
+    padding-bottom: 10px;
+    justify-content: center;
+    margin-left: 15px;
+}
+#soyBean{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+   
+}
+#nuts{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+    
+}
+#coconutHalves{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+    
+}
+#groundNuts{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+}
+#cashewMilk{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+
+}
+#coconutYoghurt{
+    padding:10px;
+ 
+    width: auto;
+    height: 75px;
+}
+.subHeading2{
+    color:#292b38;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 12px;
+ 
+   text-align: left;
+         text-justify:auto;
+         padding-top: 25px;
+         margin-left:10px;
+}
+.recyclablePackagingText {
+    
+    
+    line-height: 1.8;
+   word-wrap: keep-all;
+   font-family: 'Comfortaa', sans-serif;
+   font-size: 8px;
+    color: #292b38;
+    text-align: justify;
+    text-justify:auto;
+    margin-left:10px;
+   
+}
+.recyclablePackagingText > a {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 8px;
+     color: #292b38;
+     text-decoration: none;
+}
+#glassJar{
+    padding-left: 50px;
+     width:auto;
+     height: 250px;
+     
+ 
+ }
+ .footerContent{
+    font-size: 8px;
+    padding-bottom: 10px;
+     }
+
+.contactDetails{
+    font-family: 'Comfortaa', sans-serif;
+   font-size: 8px;
+   line-height: 0.75;
+  padding-top: 25px;
+  padding-right: 25px;
+     color:#ebecee;
+   
+
+}
+.contactDetails>a{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 8px;
+    line-height: 0.75;
+    text-align: left;
+    text-decoration: none;
+    
+}
+
+.map{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 8px;
+    line-height: 0.75;
+    padding-bottom:10px;
+    text-align: left;
+    padding-top: 25px;
+ 
+ 
+}
+.mapouter{
+    padding-bottom:25px;
+}
+#socialLinksText{
+    color:#ebecee;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 8px;
+  
+}
+.socialMediaLinks{
+    list-style: none;
+    font-size: 15px;
+    padding-top:25px;
+    padding-left:10px;
+    line-height: 0.9;
+    
+}
+
+
+.float {
+    float: left;
+    padding:2.5px;
+    padding-left:15px;
+}
+
+.float:hover{
+    font-size: 17px;
+    
+}
+    } 
+
+     
 
 
 
