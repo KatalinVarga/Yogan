@@ -115,8 +115,7 @@ h3 > a{
 
 }
 h3 > a:hover {
-   
-  font-weight: bolder;
+   color:#53707c;
 }
 
 #bottles  {
@@ -126,9 +125,11 @@ h3 > a:hover {
     height:auto;
     }
 
+
 h4 > a {
     padding-top:130px;
     padding-left: 130px;
+    margin-left:20px;
     display: flex;
     flex-direction: column;
     text-align:center;
@@ -143,7 +144,7 @@ h4 > a {
 
 
  h4 > a:hover {
-    font-weight: bolder;
+   color: #53707c;
 }
 .coralBand{
     background-color: #f8605a;
@@ -151,22 +152,28 @@ h4 > a {
 }
 
 .yoganShowReel{
-    display: flex;
-    flex-direction:row;
-
-}
-.yoganShowReel{
+   display: flex;
+   flex-direction: row;
     background-color: #f8605a;
-  max-width: 75%;
-  margin-left: 12.5%;;
-  
+ max-width: 75%;
+  margin-left:12.5%;
+
+   text-align: center;
+   align-items: center;
 }
+
 .yoganShowReel > img{
+    
         background-color: #f8605a;
         padding:20px;
         padding-bottom: 50px;
         width: 30%;
         height: auto;
+   
+}
+
+.yoganShowReel2 {
+    display:none;
 }
 #beigeBand{
     background-color: #FCE4C5;
@@ -206,7 +213,7 @@ h4 > a {
        
 }
 .subHeading > a:hover {
-    font-weight: bolder;
+    color: #53707c;
 }
 .mainText {
     color: #292929;
@@ -236,15 +243,19 @@ h4 > a {
     
 }
 .mainText > a:hover{
-    font-weight: bold;
-    color:#27383F;
+    color: #53707c;
 }
 .ResourcesImageHolder{
-    float: right;
-     padding-top: 50px;
-    padding-bottom: 20px;
-    justify-content: center;
-    margin-left: 30px;
+  
+    padding-top: 50px;
+   padding-bottom: 20px;
+   justify-content: center;
+   margin-left: 50px;
+}
+
+.ResourcesImageHolder > img:hover{
+ transform: scale(1.2);
+
    
 }
 #soyBean{
@@ -337,17 +348,19 @@ h4 > a {
      text-decoration: none;
 }
 .recyclablePackagingText > a:hover {
-   font-weight: bold;
-   color:#27383F;
+    color: #53707c;
 }
 
 #glassJar{
     margin-left: 100px;
     width:auto;
     height: 500px;
-    
-
+ 
 }
+/*#glassJar:hover {
+    transform: scale(1.2);
+   
+   }*/
 footer {
         background-color:#292b38;
         flex-direction: row;
@@ -388,7 +401,7 @@ footer {
     
 }
 .contactDetails>a:hover{
-    font-weight: bold;
+   
     color:#B1B7BE;
 }
 .map{
@@ -452,7 +465,7 @@ footer {
         height:50px; /* reduced height of header */
     }
     .menu >li {
-        font-size: 14px; /* reduced font-sizes*/
+        font-size: 15px; /* reduced font-sizes*/
     }
     h3 > a {
         font-size: 26px;  
@@ -486,6 +499,7 @@ footer {
         width: 400px;
         height:auto;
     }
+ 
     .mapouter{
         margin-right:0px;
     }
@@ -505,6 +519,24 @@ footer {
     #shop {
         padding: none;
     }
+    h3 > a:hover{
+        
+        color: #4a6977;
+    }
+    h4 >a:hover{
+       
+        color: #4a6977;
+    }
+    .subHeading > a:hover{
+        color: #4a6977;
+              
+         
+    }
+    .mainText > a:hover {
+        color: #4a6977;
+        
+    }
+   
 }
     @media only screen and (max-width: 1200px) {
         .banner {
@@ -561,13 +593,129 @@ footer {
 
    @media screen and (max-width: 1024px), 
           screen and (max-height: 1366px)  {  
-       /* this section is for IPad-pro*/
-      
-    .contactDetails {
-             padding-top:10px;
+       /* this section is for IPad-Pro*/
+            .yoganShowReel {
+                justify-content: center;
+            }
+    .yoganShowReel  {
+       display:none;
     }
-    
+    .yoganShowReel2  {
+        display:flex;
+        flex-direction: row;
+        justify-items: center;
+        max-width: 100%; 
+        align-items: center;
+        margin-left:7%;
+     }
+     .yoganShowReel2 > img {
+       
+        padding:20px;
+       
+        width: 11%;
+        height: auto;
+     }
+    .yoganShowReel2 > img:hover {
+        transform: scale(1.2);
+        padding:0px;
+    }
+    #lady {
+        padding-top:20px;
+        width:250px;
+    }
+    .subHeading {
+        line-height: 1;
+       
+        margin-top: 20px;
+     
+        margin-left: 20px;
+        margin-right: 0px;
+        
+    }
+    .subHeading > a{
+        line-height: 1;
+        font-size:18px;
+      
+    }
+  
+    .mainText {
+        line-height: 1.5;
+        margin: 20px;
+        font-size:15px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 0px;
+        
+    }
+    .mainText > a {
+        line-height: 1.5;
+        margin: 0px;
+        font-size:15px;
+        
+    }
 
+    .ResourcesImageHolder{
+        display: none;
+    }
+    .subHeading2 {
+        line-height: 1;
+        font-size:18px;
+        line-height: 1;
+        margin-top:20px;
+        margin-bottom:0px;
+        padding:0px;
+    }
+    .recyclablePackagingText {
+        line-height: 1.5;
+        font-size:15px;
+    }
+    .recyclablePackagingText > a {
+        display: none;
+    }
+    #glassJar {
+        width:280px;
+    }
+    .footerContent {
+        flex-direction: row;
+        padding-bottom:20px;
+    }
+    .contactDetails {
+             padding-top:20px;
+             font-size: 15px;
+             line-height: 1;
+             margin-right:0px;
+    }
+    .contactDetails > a {
+         font-size: 15px;
+        line-height: 1;
+    }
+    .contactDetails > a:hover {
+       
+        font-size: 15px;
+        line-height: 1;
+    }
+    .map{
+        display:none;
+    }
+    .mapouter {
+        display:none;
+      
+    }
+   #socialLinksText{
+        padding-top:10px;
+        margin-left:20px;
+   }
+   .socialMediaLinks > ul > li > a {
+       font-size: 48px;
+   }
+   .twitter {
+       margin-left:20px;
+   }
+   }
+
+
+   @media only screen and (max-width: 935px) {    /* this is upto screensize 935 as menu went awry from this width down*/
+       
    }
     }
   
