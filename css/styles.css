@@ -69,6 +69,17 @@ justify-content: center;
  padding-left: 8.3%;
   
 }
+.mobileNavBTN{
+    font-size: 30px;
+    padding: 5px;
+    padding-left: 15px;
+    background-color: #292b38; /* changed the background-colour of the bars to match the menubar*/
+ 
+}
+
+.hide{
+    display: none;
+}
 
 .banner{
     display: flex;
@@ -191,12 +202,13 @@ h4 > a {
     padding-top:50px;
     padding-left: 20px;
     margin-right: 20px;
-    
     width: 300px;
-  
     height:  auto;
-   float:left;
+    float:left;
  
+}
+#lady2{
+    display: none;
 }
 .subHeading{
     margin-top: 50px;
@@ -353,14 +365,11 @@ h4 > a {
 
 #glassJar{
     margin-left: 100px;
-    width:auto;
+    width:500;
     height: 500px;
  
 }
-/*#glassJar:hover {
-    transform: scale(1.2);
-   
-   }*/
+
 footer {
         background-color:#292b38;
         flex-direction: row;
@@ -485,8 +494,9 @@ footer {
      .recyclablePackagingText {
         padding-bottom:20px;
     }
-    #coconutHalves{ /* I have hid 3 out of 6 images at this section as 6 would have been too many on a smaller screen */ 
-        display:none;
+    
+    #groundNuts{ /* I have hid 3 out of 6 images at this section as 6 would have been too many on a smaller screen */ 
+        display: none;
     }
      #cashewMilk{
         display:none;
@@ -494,11 +504,15 @@ footer {
     #coconutYoghurt{
         display:none; 
     }
+   
+  
     #glassJar{
         margin-left: 5%;
         width: 400px;
         height:auto;
+        
     }
+   
  
     .mapouter{
         margin-right:0px;
@@ -552,10 +566,20 @@ footer {
         #bottles {
             width:200px;
     }
-   
+    .article{
+        padding-top:20px;
+        line-height: 1.5;
+    }
+    #lady{
+        margin-top:20px;
+    }
+    .recyclablePackagingText {
+        line-height: 1.5;
+    }
     .footerContent {
         flex-direction: column;
         text-align: center;
+        line-height: 1.5;
      
     }
     .map{
@@ -606,7 +630,7 @@ footer {
         justify-items: center;
         max-width: 100%; 
         align-items: center;
-        margin-left:7%;
+        margin-left:10%;
      }
      .yoganShowReel2 > img {
        
@@ -616,7 +640,7 @@ footer {
         height: auto;
      }
     .yoganShowReel2 > img:hover {
-        transform: scale(1.2);
+        transform: scale(2);
         padding:0px;
     }
     #lady {
@@ -654,8 +678,8 @@ footer {
         
     }
 
-    .ResourcesImageHolder{
-        display: none;
+    .ResourcesImageHolder{ /* grid displays these 3 images in a column at this size*/
+        display: grid;
     }
     .subHeading2 {
         line-height: 1;
@@ -682,7 +706,6 @@ footer {
     .contactDetails {
              padding-top:20px;
              font-size: 15px;
-             line-height: 1;
              margin-right:0px;
     }
     .contactDetails > a {
@@ -715,9 +738,139 @@ footer {
 
 
    @media only screen and (max-width: 935px) {    /* this is upto screensize 935 as menu went awry from this width down*/
-       
-   }
+    .fa, .fab, .fad, .fal, .far, .fas  {
+        color:#ebecee;
+     }
+     nav {
+        margin:0%;
+      
+        }
+    .menu {
+        display: block;
+        border-radius: 7px; /* I just did not like the sharp corners of the sidebar*/
+        left:0px; 
+        position: relative; /* I have opted for relative positioning as I wished the block to stay on the left side only but covering what is behind the panel */
+        width: 100%;
+        background-color:#292b38;
+        text-align: left;
+        justify-content: left;
     }
+    .menu > li {
+    
+    text-align:left;
+    padding-bottom: 25px;
+ 
+    }
+    .hide{
+        display: none;
+    }
+    .yoganShowReel2 > img:hover  {  /*this was necessary so the images won't interfere with the menu on the left*/
+       transform: none;
+    }
+    
+ 
+    }
+    @media only screen and (max-width: 850px) {  /* I know that this is not a screensize for any device but I kept changing things as soon as
+         images got distorted - in case a page was resized in a window - however, these changes suited the IPad at 768pxs and the Kindle Fire,too */
+    h1 {
+        padding-right:0px;    /* I was trying to position everything a bit closer together in the middle */
+        padding-left:30px;
+      
+    }
+    h2 {
+        padding-right:0px;
+    }
+    h3 > a {
+        padding-right:0px;
+        padding-left:30px;
+    }
+    h4 > a {
+        padding-left:3px;
+        margin-left: 3px;
+    }
+  
+   
+    .yoganShowReel {
+        display:flex;
+        max-width: 100%;
+        margin:0%;
+        justify-content: space-evenly;
+        }
+    .yoganShowReel > img {
+        padding-bottom: 20px;
+        padding-left:0px;
+        padding-right: 0px;
+        width:32%;
+    }
+    .yoganShowReel2 { /* The smaller, round images started to appear to small so I have reverted to the original images */
+        display: none;
+    }
+    .splitIntoThirds {
+        flex-direction: row-reverse;
+        margin-left: 0px;
+        max-width: 100%;
+    }
+  
+    #lady{
+       display:none;
+    }
+  
+    #lady2 {                /* I have mirrored the image and replaced the earlier looking left, so the girl is facing the text again */
+        display:flex;
+        float: right;
+        padding:0px;
+        margin:0px;
+        margin-left:15px;
+        width:40%;
+    }
+    .subHeading {
+        margin-left:60px;
+    }
+    .mainText {
+        margin-left:60px;
+        margin-right: 90px;
+    }
+    .ResourcesImageHolder {
+        display: none;
+    }
+
+    .splitIntoHalves{       /* I have swapped the two sides around  and got rid of the margins */
+        max-width: 100%;
+        margin-right:12%;
+        margin-left: 0px;
+      flex-direction: row-reverse;
+       
+        
+    }
+    .recyclablePackagingText {
+        word-wrap:keep-all;
+    }
+    #glassJar {
+        height:400px;
+        width:auto;
+        float:right;
+        margin-left:0%;
+    }
+   
+    .footerContent {            /* Centering the text of the contact details in the middle no longer  looked right*/
+        text-align: left;   
+    }
+    @media only screen and (max-width: 750px) { /* the bottles image was a problem with now being crammed in between the text and it was not necessary 
+                                                    with many more images overloading the smaller screen */
+    
+        #bottles{
+        display:none;
+    }
+    h2 {
+        margin-right:50px;
+    }
+    h3 > a {
+        padding-left:50px;
+    }
+    }
+    @media only screen and (max-width: 600px) {  
+    
+}
   
 
 
