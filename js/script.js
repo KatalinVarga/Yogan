@@ -3,7 +3,7 @@
 
 
 //Use querySelector to select an object from the DOM (Document Object Model)
-var btn = document.querySelector('.mobileNavBTN');
+var btn = document.querySelector('.mobileNavBTN');   /*this is the script for the burger menu*/
 var menu = document.querySelector('.menu');
 
 //Attach an event listener to the element, that listens for a click
@@ -40,7 +40,7 @@ function changeImage() {                    /* This script is based on an exampl
 
   
 
-    var Image_Id = document.getElementById('glassJar'); /*this variable contains the result of a query looking for the id of the image element*/
+    var Image_Id = document.getElementById('glassJar'); /*This variable contains the result of a query looking for the id of the image element*/
 
    
     if (Image_Id.src.match("img/glassjar.png")) {           /* if the source of the image is the one for the jar image*/
@@ -55,5 +55,26 @@ function changeImage() {                    /* This script is based on an exampl
     else if  (Image_Id.src.match("img/cardboardbox.png")) {
     Image_Id.src = "img/glassjar.png";   
     }
+} 
+function changeImage2() {                    /* I have duplicated the image as it is with text-wrap on smaller screens so I had to duplicate the script,too*/
+
+
+
+
+var Image_Id = document.getElementById('glassJar2'); /*This variable contains the result of a query looking for the id of the image element*/
+
+
+if (Image_Id.src.match("img/glassjar.png")) {           /* if the source of the image is the one for the jar image*/
+Image_Id.src = "img/yoganbox.svg";   
+                /* than it changes the source to the image of the Yogan box*/
+
+}
+else if  (Image_Id.src.match("img/yoganbox.svg")) {      /* I have also added a 3rd image (the example olny contained 2 interchangeable images) with the else if statements*/
+Image_Id.src = "img/cardboardbox.png";          /*after clicking on the Yogan box, the image changes to the paperbox with the handle*/
+
+}
+else if  (Image_Id.src.match("img/cardboardbox.png")) {
+Image_Id.src = "img/glassjar.png";   
+}
 } 
 

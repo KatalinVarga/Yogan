@@ -1,143 +1,126 @@
-*{ /* the initial CSS was designed for the desktop version, starting with a wide screen */
+    *{ /* the initial CSS was designed for the desktop version, starting with a wide screen */
     color: #ebecee;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
-}
-.container{
-    width: auto;
-    margin: 0 auto;
-    background-color: #ebecee;
-  
-}
-
+    }
+body{
+    width: 100%;          /*I did not want any margins to appear*/
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    }
 header{
-    height: 70px ;
+    height: 70px ;                  /*My header is outside my container as the width of my menu at the top is wider than the content at the superceding sections*/
     width: 100%;
     margin: 0px;
     display: flex;
     flex-direction: row;
-  
     background-color:#292b38;
      }
-
+.container{          
+    width: auto;
+    margin: 0 auto;
+    background-color: #ebecee;   /* I have had a colour scheme as detailed in my blog posts*/
+    }
 nav{
-    
-justify-content: center;
-   margin-left:15%;
+   justify-content: center;
+   margin-left:15%;             /*For greater flexibility, I have decided to define many itemsizes in percentages. It did not work for everything though, so I have only used them where it seemed to work.*/
    margin-right: 15%;
    align-items:center;
    max-width: 70%;
-
-}
-
-
+    }       
 .menu{
     justify-content:center;
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items:center;
-    white-space: nowrap;
-}
-
+    align-items:center;  /*Centering the items, it would look neater and the nowrap was necessary so the words do not start to build on top of each other as the screen gets smaller.*/
+    white-space: nowrap;    
+    }
 .menu > li{
-  
     padding: 20px;
-   
     color:#ebecee;
     font-size: 18px;
     text-align: center;
-   
-
-    
-}
+    }
 .menu >li > a {
     text-decoration: none;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', sans-serif; /* this Fontawesome font-type from fontawesome.com looked nice and round, playful but elegant the same time.*/
     justify-content:space-evenly;
-  
-}
+    }
 .menu > li  a:hover{
-   
-    color:#B1B7BE;
-    
- }
+    color:#B1B7BE;          /*At hovering the mouse, I went for a subtle but noticeable change in colour and I applied subtle colour changes for hovering all along the page.*/
+     }
 
-#shop{
+#shop{                      /* I have assigned the 'order online' menu item an ID so I could push the last two items to the right side of the menu, a bit further from the rest of the menu items.Everything had to be centered but these two a bit more isolated.*/
  padding-left: 8.3%;
-  
-}
-.mobileNavBTN{
+    }
+.mobileNavBTN{              /*Button for burger menu.*/
     font-size: 30px;
     padding: 5px;
     padding-left: 15px;
-    background-color: #292b38; /* changed the background-colour of the bars to match the menubar*/
- 
-}
+    background-color: #292b38; /* changed the background-colour of the bars to match the menu bar*/
+    }
 
 .hide{
-    display: none;
-}
+    display: none;        /*Hide option to be activated by function in js.*/
+    }       
 
 .banner{
-    display: flex;
+    display: flex;              /*Flex-display worked well for my goal of putting objects next to each other in a row.*/
     flex-direction: row;
     justify-content: center;
     color: #292b38;
-   max-width: 75%;
-   margin-left: 12.5%;
-}
+    max-width: 75%;             /* I used the same width and margins for each 'band' of my page - I had colour-coded zones for different topics on the landing page.Only the banner had my default background-colour.*/
+    margin-left: 12.5%;
+    }   
 
-.title{
+.title{                         /* This division was needed as I wanted some words to be aligned next to each other whilst others on top of each other in a column.*/
     display: flex;
     flex-direction: column;
-   padding-right: 40px;
-  
-}
-.brandName{
+    padding-right: 40px; 
+    }
+.brandName{                     /*Logo's place.*/
     display: flex;
     flex-direction: row;
-}
-
-
-
+    }
 
 h1{
     padding:20px 10px;
-    font-family: 'Bungee', Arial, Helvetica, sans-serif;
+    font-family: 'Bungee', Arial, Helvetica, sans-serif;   /*Logo's first word is in different font-type and colour.*/
     font-size: 42px;
     color: #f8605a;
-}
+    }
 h2{
     padding:20px 10px;
-    font-family: 'Bungee Outline', Arial, Helvetica, sans-serif;
+    font-family: 'Bungee Outline', Arial, Helvetica, sans-serif; 
     font-size: 42px;
     color: #292b38;
-}
+    }
 h3 > a{
-    text-decoration: none;
-   padding: 20px 10px;
+    text-decoration: none;    /*Clickable link to catering page.*/
+    padding: 20px 10px;
+    padding-top:0px;
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 32px;
     color: #292b38;
-
-}
+    }
 h3 > a:hover {
-   color:#53707c;
-}
+   color:#53707c;           /*Colour-change at mouseover.*/
+    }
 
 #bottles  {
-    padding-top: 20px;
+    padding-top: 20px;       /*Image in the middle.*/
     padding-bottom: 20px;
     width:25%;
     height:auto;
     }
 
 
-h4 > a {
+h4 > a {                        /*Clickable link to products' page.*/
     padding-top:130px;
     padding-left: 130px;
     margin-left:20px;
@@ -150,256 +133,235 @@ h4 > a {
     font-size: 30px;
     font-weight: lighter;
     text-decoration: none;
-    
-}
-
+    }
 
  h4 > a:hover {
    color: #53707c;
+    }
+h5 {
+    display: none;          /*This shorter version for the mentioning of the products at the banner only appears at small screens as defined later.*/
 }
 .coralBand{
-    background-color: #f8605a;
+    background-color: #f8605a;    /*Coral coloured zone.*/
     justify-content: center;
-}
+    }
 
-.yoganShowReel{
-   display: flex;
-   flex-direction: row;
+.yoganShowReel{                     /*Display of photos of products.*/
+    display: flex;
+    flex-direction: row;
     background-color: #f8605a;
- max-width: 75%;
-  margin-left:12.5%;
-
-   text-align: center;
-   align-items: center;
-}
+    max-width: 75%;
+    margin-left:12.5%;
+    text-align: center;
+    align-items: center;
+    }
 
 .yoganShowReel > img{
-    
-        background-color: #f8605a;
+        background-color: #f8605a;   /*This section sets the width/height and paddings for the individual images.*/
         padding:20px;
         padding-bottom: 50px;
         width: 30%;
         height: auto;
-   
+    }
+
+.yoganShowReel2 {               /*The 2nd version of the photo-display, for tablet sized screens.*/
+  display:none;
+    }
+.smallerDisplayOfProducts {     /*The 3rd, tiniest version of the display with only two photos for smaller screens.*/
+    display: none;
 }
 
-.yoganShowReel2 {
-    display:none;
-}
 #beigeBand{
-    background-color: #FCE4C5;
-}
+    background-color: #FCE4C5;   /*Beige area.*/
+    }
 .splitIntoThirds{
-   display: flex;
+   display: flex;           /*I have split this section into 3 sub-sections.*/
     flex-direction: row;
     margin-left: 12.5%;;
     max-width: 75%;
-}
+    }
 #wrapImage{
-    float: left;
-}
+    float: left;            /*To be able to wrap the text around the image, I had to create a division where the image and the text were in the same div.*/
+    }
 #lady{
-    padding-top:50px;
+    padding-top:50px;       /*The first image of the shop-manager, Penny Peasgood, where she is tilting her head to the right.As the screen changes, it looked better if she faced the left so I had alternate mirrored versions.*/
     padding-left: 20px;
     margin-right: 20px;
     width: 300px;
     height:  auto;
     float:left;
- 
-}
+    }
 #lady2{
-    display: none;
-}
+    display: none;          /*Lady tilting her head to the opposite side.*/
+    }
 .subHeading{
-    margin-top: 50px;
+    margin-top: 50px;         /*Article's headline.*/
     margin-left:20px;
-}
-.subHeading > a{
+    }
+.subHeading > a{                /*It is also a link to the vegan page about health benefits of veganism.*/
     color:#292929;
     font-family: 'Comfortaa', sans-serif;
     font-size: 24px;
-    
-   text-align: left;
+    text-align: left;
     text-justify:auto; 
     text-decoration: none;
-       
-}
-.subHeading > a:hover {
+    }
+.subHeading > a:hover {         
     color: #53707c;
-}
-.mainText {
+    }
+.mainText {                 /*The main article and its formatting.*/
     color: #292929;
     margin-left: 20px;
-   
-    margin-top: 50px;
-    margin-bottom: 50px;
+     margin-top: 50px;
+    margin-bottom: 0px;
     font-family: 'Comfortaa', sans-serif;
-       font-size: 16px;
+    font-size: 16px;
      text-justify: auto;
      text-align: justify;
-   line-height: 1.8;
-    
-}
-.mainText >a{
+     line-height: 1.8;  
+    }
+.longerVersionOfText{           /*This section I have divided in order to cut it off at smaller screensizes.All formatting is the same as the earlier text piece's.*/
     color: #292929;
-    margin-left: 30px;
-
-    margin-top: 50px;
+    margin-left: 20px;
+     margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    text-justify: auto;
+    text-align: justify;
+    line-height: 1.8;  
+}
+#readOn >a{                     /*An other link to the vegan health benefits@ page.*/
+    color: #292929;
+    margin-left: 20px;
+    margin-top: 0px;
     margin-bottom: 50px;
     font-family: 'Comfortaa', sans-serif;
-       font-size: 16px;
-     text-justify: auto;
-     text-align: justify;
-   line-height: 1.8;
-   text-decoration: none;
-    
-}
-.mainText > a:hover{
+    font-size: 16px;
+    text-justify: auto;
+    text-align: justify;
+    line-height: 1.8;
+    text-decoration: none;
+    }
+#readOn > a:hover{
     color: #53707c;
-}
-.ResourcesImageHolder{
-  
+    }
+.ResourcesImageHolder{          /*This is the holder for the photos of the various resources of yoghurt substitutes, such as nuts and soy bean which are the sources of vegan milk and yoghurt.*/
     padding-top: 50px;
-   padding-bottom: 20px;
-   justify-content: center;
-   margin-left: 50px;
-}
+    padding-bottom: 20px;
+    justify-content: center;
+    margin-left: 50px;
+    }
 
-.ResourcesImageHolder > img:hover{
+.ResourcesImageHolder > img:hover{  /*To make the display a bit more interesting, these image zoom in slightly at mouseover.*/
  transform: scale(1.2);
-
-   
-}
+    }
 #soyBean{
-    padding:20px;
+    padding:20px;   /* I have ID'ed all of these images as I wanted to reduce their number at smaller screensizes.*/
     width: auto;
     height: 150px;
-   
-}
+   }
 #nuts{
     padding:20px;
-        width: auto;
-    height: 150px;
-    
-}
-#coconutHalves{
-    padding:20px;
-  
     width: auto;
     height: 150px;
-    
-}
+    }
+#coconutHalves{
+    padding:20px;
+    width: auto;
+    height: 150px;
+    }
 #groundNuts{
     padding-top:20px;
     padding-bottom: 20px;
     padding-left:20px;
-    
-        width: auto;
+    width: auto;
     height: 150px;
-}
+    }
 #cashewMilk{
     padding-top:20px;
     padding-bottom: 20px;
     padding-left:20px;
     width: auto;
     height: 150px;
-
-}
+    }
 #coconutYoghurt{
     padding-top:20px;
     padding-bottom: 20px;
     padding-left:20px;
- 
-    width: auto;
+     width: auto;
     height: 150px;
-    
-}
-
-
-
-   
-
-.greyZone{
-
+   }
+.greyZone{                          /*This is the section for the sustainable packaging part.*/
    background-color: #ebecee;
-   
-}
-.splitIntoHalves{    /*this further division within the grey area was needed to be able to have backgound-colour at full width but constraining the content's width*/
+   }
+.splitIntoHalves{    /*This further division within the grey area was needed to be able to have backgound-colour at full width but constraining the content's width*/
     display: flex;
     flex-direction: row;
     max-width: 75%;
     margin-left: 12.5%;;
-}
-.subHeading2{
+    }
+.subHeading2{               /*The section's subheading.*/
     color:#292b38;
     font-family: 'Comfortaa', sans-serif;
-    font-size: 24px;
- 
-   text-align: left;
-         text-justify:auto;
-         padding-top: 50px;
-         margin-left:20px;
-}
-.recyclablePackagingText {
-    
-    
-    line-height: 1.8;
-   word-wrap: keep-all;
-   font-family: 'Comfortaa', sans-serif;
-   font-size: 16px;
+    font-size: 24px;       
+    text-align: left;  /* I kept re-aligning the sub-headings later, as different alignment looked better at different sizes.*/
+    text-justify:auto;
+    padding-top: 50px;
+    margin-left:20px;
+    }
+.recyclablePackagingText {    /* The text about recycleable packaging.*/
+    line-height: 1.8;    /* This font-type looked to crammed at a single line height.*/
+    word-wrap: keep-all;   /* I have put this down so the words won't be hyphenated at the end of the lines.*/
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
     color: #292b38;
     text-align: justify;
     text-justify:auto;
     margin-left:20px;
-   
-}
-.recyclablePackagingText > a {
+   }
+.recyclablePackagingText > a {               /* At the mentioning of the address, there is a link to the map at the bottom of the page.*/
     font-family: 'Comfortaa', sans-serif;
     font-size: 16px;
-     color: #292b38;
-     text-decoration: none;
-}
-.recyclablePackagingText > a:hover {
+    color: #292b38;
+    text-decoration: none;
+    }
+.recyclablePackagingText > a:hover {       
     color: #53707c;
-}
+    }
 
-#glassJar{
+#glassJar{                      /* Id for 3 interchangeable images of packaging. Js function activates on click and changes the image-source.*/
     margin-left: 100px;
     width:500;
     height: 500px;
- 
-}
+    }
+#glassJar2{                 /* The previous imageholder duplicated for a text-wrapped version at smaller screensizes.*/
+    display:none;
+    }
 
-footer {
+footer {                    /*Generic style for the footer.As with the previous zones, this defines the bg.colour of the area and margins can appear in the inner sections, so I could keep the bg.colour.*/
         background-color:#292b38;
         flex-direction: row;
         justify-content: center;
-      
-     
-          }
-  .footerContent{
-    display: flex;
+        }
+  .footerContent{               /* I have created this further division to define the content separately.*/
+    display: flex;                  
     flex-direction: row;
     justify-content: center;
     text-align: left;
-    
     color:#ebecee;
     font-size: 16px;
     padding-bottom: 20px;
     text-decoration:none ;
-   
-  }
-
+      }
 .contactDetails{
     font-family: 'Comfortaa', sans-serif;
-   font-size: 16px;
-   line-height: 1.5;
-  padding-top: 50px;
-  margin-right: 100px;
-     color:#ebecee;
-   
-
-}
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 50px;
+    margin-right: 100px;   /*I have positioned the text so it would not be right at the side of the page.*/
+    color:#ebecee;
+    }
 .contactDetails>a{
     color:#ebecee;
     font-family: 'Comfortaa', sans-serif;
@@ -407,13 +369,11 @@ footer {
     line-height: 1.5;
     text-align: left;
     text-decoration: none;
-    
-}
+    }
 .contactDetails>a:hover{
-   
-    color:#B1B7BE;
-}
-.map{
+       color:#B1B7BE;
+    }
+.map{                       /*Area designed for the embedded map, with some text.*/
     color:#ebecee;
     font-family: 'Comfortaa', sans-serif;
     font-size: 16px;
@@ -421,55 +381,43 @@ footer {
     padding-bottom:20px;
     text-align: left;
     padding-top: 50px;
- 
- 
-}
-.mapouter{
+    }
+.mapouter{                  /* To gain some control over the paddings/margins of the map, I have created a classed subdiv.*/
     padding-bottom:50px;
     margin-right:100px;
-}
-.socialMediaLinks{
-
-   
-   
+    }
+.socialMediaLinks{          /*Place for social media icons and text.*/
     margin-left: 20px;
     line-height: 1.8;
-    
-}
-#socialLinksText{
+    }
+#socialLinksText{           /*Section with text for social media icons.*/
     color:#ebecee;
     font-family: 'Comfortaa', sans-serif;
     font-size: 16px;
     text-align: center;
     padding-left:20px;
     padding-top:50px;
-  
-}
+    }
 
-.mediaList {
+.mediaList {            /*List for social media icons.*/
     list-style: none;
-   padding:none;
-   font-size: 0px; /* the ul property took up a line with no content, to remove this I set it to zero and changed the fontsize for the actual icons below */ 
-   
-}
+    font-size: 0px; /* the ul tagged item took up a line with no content, to remove this I set it to zero and changed the fontsize for the actual icons below */ 
+   }
 .mediaList > li {
     font-size: 30px;
-}
+    }
 
-
-.float {
+.float {                        /*At bigger screens, float worked best to align them next to each other but floating them all to the right.*/
     float: left;
     padding-right:5px;
     padding-left:30px;
     text-align: center;
-}
-
+    }
 .float:hover{
-    font-size: 35px;
-    
-}
+    font-size: 35px;     /* I have decided to re-scale them at mouseover so it would look as if the icons were attracted to the mousepointer.*/
+    }
 
-@media only screen and (max-width: 1456px) {  /* I checked using the 'inspect' option and by responsive screen when the elements started to go in the wrong direction, not being centered where they should be and fonts becoming too big and made changes accordingly at each size where change seemed needed */
+@media screen and (max-width: 1456px) {  /* I checked the layout of the page using the 'inspect' option and the responsive screen emulator in Chrome and Firefox. As soon as the elements started to go in the wrong direction, not being centered where they should be and fonts becoming too big, I have made changes accordingly at each size where change seemed neccessary */
     header {
         height:50px; /* reduced height of header */
     }
@@ -497,133 +445,115 @@ footer {
     
     #groundNuts{ /* I have hid 3 out of 6 images at this section as 6 would have been too many on a smaller screen */ 
         display: none;
-    }
+        }
      #cashewMilk{
         display:none;
-    }
+        }
     #coconutYoghurt{
         display:none; 
-    }
-   
-  
+        }
+     
     #glassJar{
         margin-left: 5%;
         width: 400px;
         height:auto;
-        
-    }
-   
- 
-    .mapouter{
+        }
+     .mapouter{
         margin-right:0px;
-    }
+        }
     .contactDetails {
         margin-right:20px;
-    }
+        }
     .socialMediaLinks{
         margin:0px;
-    }
+        }
   
-}
-@media only screen and (max-width: 1300px) {
+    }   
+    @media only screen and (max-width: 1300px) {
     .menu >li {
        padding:10px;
-       white-space: normal;
+       white-space: normal; /* I have allowed for the white-space to be used to reduce the size of each menu item.*/
     }
     #shop {
         padding: none;
     }
     h3 > a:hover{
-        
-        color: #4a6977;
+        color: #4a6977;   /* I have made subtle changes of colour at hover to enhance visibility.*/
     }
     h4 >a:hover{
-       
         color: #4a6977;
     }
     .subHeading > a:hover{
-        color: #4a6977;
-              
-         
+        color: #4a6977; 
     }
-    .mainText > a:hover {
-        color: #4a6977;
-        
+   #readOn > a:hover {
+        color: #4a6977;   
     }
    
-}
+    }   
     @media only screen and (max-width: 1200px) {
         .banner {
             max-width: 100%;
             margin:0%;
         }
         .title {
-            padding-right: 0px;
+            padding-right: 0px;    /* I was getting rid of paddings which were in the way now/ made the banner section look messy.*/
         }
         h4 > a {
             padding-left:15px;
         }
         #bottles {
-            width:200px;
-    }
+            width:200px;      /*Also, I was reducing the size of objects/texts.*/
+        }
     .article{
         padding-top:20px;
         line-height: 1.5;
-    }
+        }
     #lady{
         margin-top:20px;
-    }
+        }
     .recyclablePackagingText {
         line-height: 1.5;
-    }
+        }
     .footerContent {
-        flex-direction: column;
+        flex-direction: column;      /* At this screensize, I have changed the flex-direction to column so everything would fit nicely on screen.*/
         text-align: center;
         line-height: 1.5;
-     
-    }
+        }
     .map{
         text-align: center;
-    }
+        }
     .mapouter {
     margin-left:25%
-    
- 
-    }
+        }
     .gmap_canvas {    /* I set the width to roughly 1/3 to reduce the size of the map */ 
         margin:0px;
         width:30%;
-    }
+        }
     .socialMediaLinks {  
         padding: 0px;
-       
-       
-    }
+     }
     .socialMediaLinks  > ul > li > a {
-        font-size: 42px;
+        font-size: 42px;                    /* With more space for themselves only, the icons could grow bigger.*/
     }
     .twitter {
-        margin-left:40%;
+        margin-left:40%;      /* The Twitter icon was singled out and id'ed so I could add margin on the left to align them as they were floating to the left.*/
     }
    
    .float {
        float:left;
-       
-         
-   }
+       }
    .float:hover {
        font-size: 45px;
-   }
-
-   @media screen and (max-width: 1024px), 
-          screen and (max-height: 1366px)  {  
-       /* this section is for IPad-Pro*/
-            .yoganShowReel {
-                justify-content: center;
-            }
-    .yoganShowReel  {
-       display:none;
     }
+    }   
+   @media screen and (max-width: 1024px) 
+     and (max-height: 1366px)  {  
+       /* this section is for IPad-Pro*/
+            
+    .yoganShowReel  {    /* At this size, I have changed the photo-display to the round,smaller photos.*/
+       display:none;
+    }   
     .yoganShowReel2  {
         display:flex;
         flex-direction: row;
@@ -631,56 +561,55 @@ footer {
         max-width: 100%; 
         align-items: center;
         margin-left:10%;
-     }
+        }
      .yoganShowReel2 > img {
-       
         padding:20px;
-       
         width: 11%;
         height: auto;
-     }
+        }
     .yoganShowReel2 > img:hover {
-        transform: scale(2);
+        transform: scale(2);        /* The round images zoom in at mouseover.*/
         padding:0px;
-    }
+        }
     #lady {
         padding-top:20px;
         width:250px;
-    }
-    .subHeading {
+        }
+    .subHeading {               /* Looking at the text, some resizing and aligning, padding-changing seemed inevitable.*/
         line-height: 1;
-       
         margin-top: 20px;
-     
         margin-left: 20px;
         margin-right: 0px;
-        
-    }
+         }
     .subHeading > a{
         line-height: 1;
         font-size:18px;
-      
-    }
+        }
   
     .mainText {
         line-height: 1.5;
-        margin: 20px;
         font-size:15px;
         margin-top: 20px;
         margin-left: 20px;
         margin-right: 0px;
-        
-    }
-    .mainText > a {
+        }
+    .longerVersionOfText{
         line-height: 1.5;
-        margin: 0px;
+        margin-bottom: 0px;
         font-size:15px;
-        
+        margin-left: 20px;
+        margin-right: 0px;
     }
+    #readOn > a {
+        line-height: 1.5;
+        margin-left:20px;
+        margin-bottom:30px;
+        font-size:15px;
+        }
 
-    .ResourcesImageHolder{ /* grid displays these 3 images in a column at this size*/
+    .ResourcesImageHolder{ /* A grid displays these 3 images in a column at this size which was exactly what I looked for.*/
         display: grid;
-    }
+        }
     .subHeading2 {
         line-height: 1;
         font-size:18px;
@@ -688,198 +617,541 @@ footer {
         margin-top:20px;
         margin-bottom:0px;
         padding:0px;
-    }
+        }
     .recyclablePackagingText {
         line-height: 1.5;
         font-size:15px;
-    }
-    .recyclablePackagingText > a {
+        }
+    .recyclablePackagingText > a {      /* As I have removed the embedded map at the bottom of the page, this link has become redundant.*/
         display: none;
-    }
+        }
     #glassJar {
-        width:280px;
-    }
+        width:280px;                 /*This image was resized, too.*/
+        }
     .footerContent {
         flex-direction: row;
         padding-bottom:20px;
-    }
+        }
     .contactDetails {
              padding-top:20px;
              font-size: 15px;
              margin-right:0px;
-    }
+        }
     .contactDetails > a {
-         font-size: 15px;
-        line-height: 1;
-    }
-    .contactDetails > a:hover {
-       
         font-size: 15px;
         line-height: 1;
-    }
+        }
+    .contactDetails > a:hover {
+        font-size: 15px;
+        line-height: 1;
+        }
     .map{
-        display:none;
-    }
+        display:none;       /* The map was too big at this point and not exactly essential, the address of the contact details contains the link to this Google map instead.*/
+        }
     .mapouter {
         display:none;
-      
-    }
+        }
    #socialLinksText{
         padding-top:10px;
         margin-left:20px;
-   }
+        }
    .socialMediaLinks > ul > li > a {
        font-size: 48px;
-   }
+        }
    .twitter {
-       margin-left:20px;
-   }
+       margin-left:20px;     /*Re-adjusting these icons again.*/
+        }
    }
 
 
-   @media only screen and (max-width: 935px) {    /* this is upto screensize 935 as menu went awry from this width down*/
-    .fa, .fab, .fad, .fal, .far, .fas  {
+   @media only screen and (max-width: 935px) {    /* This is upto screensize 935pxs as menu went awry from this width down*/
+    .fa, .fab, .fad, .fal, .far, .fas  {        /*Burger menu replaces menu bar*/
         color:#ebecee;
-     }
+        }
      nav {
         margin:0%;
-      
-        }
+          }
     .menu {
         display: block;
-        border-radius: 7px; /* I just did not like the sharp corners of the sidebar*/
+        border-radius: 7px; /* I did not like the sharp corners of the sidebar*/
         left:0px; 
         position: relative; /* I have opted for relative positioning as I wished the block to stay on the left side only but covering what is behind the panel */
         width: 100%;
         background-color:#292b38;
         text-align: left;
         justify-content: left;
-    }
+        }
     .menu > li {
-    
-    text-align:left;
-    padding-bottom: 25px;
- 
-    }
+        text-align:left;
+        padding-bottom: 25px;
+        }
     .hide{
         display: none;
-    }
-    .yoganShowReel2 > img:hover  {  /*this was necessary so the images won't interfere with the menu on the left*/
+        }
+    .yoganShowReel2 > img:hover  {  /*Removing this was necessary so the images won't interfere with the menu on the left*/
        transform: none;
-    }
-    
- 
+     }
+     
     }
     @media only screen and (max-width: 850px) {  /* I know that this is not a screensize for any device but I kept changing things as soon as
-         images got distorted - in case a page was resized in a window - however, these changes suited the IPad at 768pxs and the Kindle Fire,too */
-    h1 {
-        padding-right:0px;    /* I was trying to position everything a bit closer together in the middle */
-        padding-left:30px;
-      
-    }
-    h2 {
-        padding-right:0px;
-    }
-    h3 > a {
-        padding-right:0px;
-        padding-left:30px;
-    }
-    h4 > a {
-        padding-left:3px;
-        margin-left: 3px;
-    }
-  
+        images got distorted - in case a page was resized in a window - however, these changes suited the IPad at 768pxs and the Kindle Fire,too */
+   h1 {
+       padding-right:0px;    /* I was trying to position everything a bit closer together in the middle */
+       padding-left:30px;
+         }
+   h2 {
+       padding-right:0px;
+       }
+   h3 > a {
+       padding-right:0px;
+       padding-left:30px;
+       }
+   h4 > a {
+       padding-left:3px;
+       margin-left: 3px;
+       }
+ 
+   .yoganShowReel {
+       display:flex;
+       max-width: 100%;
+       margin:0%;
+       justify-content: space-evenly;
+       }
+   .yoganShowReel > img {
+       padding-bottom: 20px;
+       padding-left:0px;
+       padding-right: 0px;
+       width:32%;
+   }
+   .yoganShowReel2 { /* The smaller, round images started to appear too small so I have reverted to the original display of photos. */
+       display: none;
+   } 
+      .splitIntoThirds {
+       flex-direction: row-reverse;   /*I don't display the resource-images here but decided to move the lady to the other side, to create a balance of panels/images when the sidemenu is active.*/
+       margin-left: 0px;
+       max-width: 100%;
+   }
+ 
+   #lady{
+      display:none;   /* The mirrored picture will replace the original -as the lady is on the other side, it suits her to face the text again. looking 'in' and not outward.*/
+   }
+ 
+   #lady2 {                /* I have mirrored the image and replaced the earlier looking left, so the girl is facing the text again */
+       display:flex;
+       float: right;
+       padding:0px;
+       margin:0px;
+       margin-left:15px;
+       width:40%;
+   }
+   .subHeading {
+       margin-left:60px;    /* There was a constant need to change margins and paddings at the text sections.*/
+   }
+   .mainText {
+       margin-left:60px;
+       margin-right: 90px;
+   }
+   .longerVersionOfText{
+    margin-left:60px;
+    margin-right: 90px;
+   }
+   #readOn{
+    margin-left:40px;
+    
+   }
    
-    .yoganShowReel {
-        display:flex;
-        max-width: 100%;
-        margin:0%;
-        justify-content: space-evenly;
-        }
-    .yoganShowReel > img {
-        padding-bottom: 20px;
-        padding-left:0px;
-        padding-right: 0px;
-        width:32%;
-    }
-    .yoganShowReel2 { /* The smaller, round images started to appear to small so I have reverted to the original images */
-        display: none;
-    }
-    .splitIntoThirds {
-        flex-direction: row-reverse;
-        margin-left: 0px;
-        max-width: 100%;
-    }
-  
-    #lady{
-       display:none;
-    }
-  
-    #lady2 {                /* I have mirrored the image and replaced the earlier looking left, so the girl is facing the text again */
-        display:flex;
-        float: right;
-        padding:0px;
-        margin:0px;
-        margin-left:15px;
-        width:40%;
-    }
-    .subHeading {
-        margin-left:60px;
-    }
-    .mainText {
-        margin-left:60px;
-        margin-right: 90px;
-    }
-    .ResourcesImageHolder {
-        display: none;
-    }
+   .ResourcesImageHolder {   /* The source images would have taken up too much of the page now and distract the reader from the main information.*/
+       display: none;
+   }
 
-    .splitIntoHalves{       /* I have swapped the two sides around  and got rid of the margins */
-        max-width: 100%;
-        margin-right:12%;
-        margin-left: 0px;
-      flex-direction: row-reverse;
-       
+   .splitIntoHalves{       /* I have swapped the two sides around  and got rid of the margins */
+       max-width: 100%;
+       margin-right:12%;
+       margin-left: 0px;
+     flex-direction: row-reverse;  
+   }
+   .recyclablePackagingText {
+       word-wrap:keep-all;     /* I did not want any broken up and hyphenated text.*/
+   }
+   #glassJar {
+       height:400px;
+       width:auto;
+       float:right;
+       margin-left:0%;
+   }
+  
+   .footerContent {            /* Centering the text of the contact details in the middle no longer  looked right*/
+       text-align: left;   
+   }
+   }
+   @media only screen and (max-width: 750px) { /* the bottles image was a problem with now being crammed in between the text and it was not necessary 
+                                                   with many more images overloading the smaller screen */
+   
+       #bottles{
+       display:none;
+       }
+       h2 {
+       margin-right:50px;      /* A bit of formatting was done, readjusting margins nad paddings.*/
+       }
+        h3 > a {
+       padding-left:50px;
+       }
+       }
+   @media only screen and (max-width: 600px) {  /* This is also the right css for the Surface Duo as I was checking this*/
+    .banner{
+        justify-content: right;     /* All the banner content had to be re-aligned so they would look neat next to each other.*/
+        display:flex;
         
     }
-    .recyclablePackagingText {
-        word-wrap:keep-all;
+        h1{                             /*The text at the banner looks left-aligned in FireFox but it stays in the middle in Chrome, this was an anomaly I found that there is that much difference between the displays, it made me double-check everything I have done earlier and I also had to make some changes so everything would look right in both browsers.*/
+        padding:0px;
+        margin-left:125px;
+        padding-left:20px;
+        text-align: center;
+        justify-content: right;
+       
+        }
+       h2 {
+           text-align: center;
+           padding-top:0px;
+           padding-bottom: 0px;
+           justify-content: right;
+       }
+       h3 {
+           text-align: right;
+           padding:10px;
+           padding-right:20px;
+           padding-left:0px;
+           margin-right:40px;
+           margin-left:0px;
+
+           }
+        h3 > a {
+            padding:0px;
+            justify-content: right;
+        }
+       h4 {
+           display: none;
+       }
+       span {
+        display: flex;
+        justify-content: right  ; 
+        margin-right:50px; 
+        margin-left:90px; /* I had to add this margin as the text had gone astray in Chrome (it was ok in Firefox)*/
+       }
+       span > a {
+        text-decoration: none;
+        font-family: 'Comfortaa', sans-serif;
+        font-size:26px;
+        color:#f8605a;
+        text-align:right;
+        justify-content: right;
+        margin-left:110px; /* I had to add this margin as the text had gone astray in Chrome (it was ok in Firefox)*/
+       }
+       .yoganShowReel {    /* Getting rid of the showreel of 3 images to replace it with only 2 images with better visibility.*/
+           display: none;
+       }
+       .smallerDisplayOfProducts {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-color: #f8605a;
+       }
+       .subHeading{
+           margin-left:40px;            /*Re-sizing margins.*/
+           margin-bottom:20px;
+       }
+       .mainText {
+           margin:40px;
+           margin-top:10px;
+           margin-bottom:0px;
+       }
+       .longerVersionOfText{
+       display:none;
+       }
+       #readOn{
+           display:flex;
+           margin-left:20px;
+       }
+      
+   #lady2{
+       width:45%;               /*It might seem strange that I have enlarged this photo at a smaller screen size but with shorter and less images, it looked better if this picture was more prominant.*/
+   }
+   .splitIntoHalves {
+       flex-direction: column-reverse;  /*Wrapping the text was no longer an option unless the photo of the packaging was too tiny so I decided to swap the order so the image would follow the preceding text and not a text again.*/
+       margin-left:60px;
+         }
+   .subHeading2{
+       text-align: center;
+   }
+  #glassJar{
+       display: block;     /* Using block to put the image in the middle of the width, taking up this block of the page.*/
+       margin-left: auto;
+       margin-right: auto;
+  }
+  footer{
+      padding-bottom:100px;  /* The social media icons started to flow out of the footer.*/
+  }
+  .footerContent{
+   display: block;       /* The content of the footer is centered in the middle in a block but the list items of the icons are in lfex display so they could be in a single line next to each other.*/
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+  }
+  #socialLinksText{
+      padding-left:0px;
+      margin:0px;
+  }
+  .mediaList > li > a {
+   background-color: #292b38;
+   display: flex;
+   flex-direction: row;
+   text-decoration: none;
+   justify-content: space-evenly;
+   width: auto;
+   padding-left:60px;
     }
-    #glassJar {
-        height:400px;
-        width:auto;
-        float:right;
-        margin-left:0%;
+    .twitter{
+    margin-left:100px; /*This was a way for me to centre the icons as I used floating */
     }
-   
-    .footerContent {            /* Centering the text of the contact details in the middle no longer  looked right*/
-        text-align: left;   
+   }
+   @media only screen and (max-width: 520px){ 
+       #lady2 {
+           width:35%; /* The image had to shrink again.*/
+           }
+    .mainText{
+        margin-right:20px;
     }
-    @media only screen and (max-width: 750px) { /* the bottles image was a problem with now being crammed in between the text and it was not necessary 
-                                                    with many more images overloading the smaller screen */
     
-        #bottles{
-        display:none;
+    .greyZone{
+        display:flex;
+        flex-direction: row;
     }
-    h2 {
-        margin-right:50px;
+    .splitIntoHalves{    /* I have wrapped the text around the now smaller image of the jar as I could not have the image of the jar being bigger than the person in the upper picture.*/
+        display:flex;
+        flex-direction: row;
+        margin-left:0px;
+        margin-right:0px;
     }
-    h3 > a {
-        padding-left:50px;
+    .subHeading2{
+        text-align: left;
     }
+    .recyclablePackagingText{
+        margin-right:20px;
+        
+  }
+    #glassJar{    /* In order to wrap the text around the image, I have added a duplicated version of the image again so it would be in the same section as the text to wrap. */
+    display:none;
+            }
+
+    #glassJar2{
+        height:300px;
+        display:flex;
+        flex-direction: row;
+        margin:0px;
+        padding:0px;
+        float:left;
+        margin-right:10px;
+         }
+    .twitter{
+        margin-left:70px;   /*Re-sizing margin at the icons.*/
     }
-    @media only screen and (max-width: 600px) {  
-    
-}
+
+    }
+    @media screen and (max-width: 477px){  /* There was no problem in FireFox but a white space appeared on the right in Chrome */
+      
+        .brandName{             /* I have removed all margins from the banner as these caused the problems*/
+            margin:0px;
+           }
+        h1 {
+            margin: 0px;  
+        }
+        h2 {
+            margin:0px;
+           
+        }
+        }
+    @media screen and (max-width: 414px){   /*iPhone 6/7/8+ and Pixel 2, Pixel 2XL*/
+        .banner {
+            justify-content: center;
+        }
+        #socialLinksText{
+            display:none;
+        }
+        .mediaList > li > a{   /*Social media icons needed re-aligning, reducing gaps*/
+            padding:5px;
+        }
+        .twitter{
+            margin-left:120px;
+        }
+       
+        .mediaList > li > a{
+                padding:5px;  /* Padding was reduced for better alingment.*/
+            }
+    }
+    @media screen and (max-width: 375px){  /*iPhoneX* - mostly formatting the text and aligning items,texts and images so it looks better on a much smaller screen */
+        .brandName{
+            margin:0px;
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            justify-content: center;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        h2 {
+            font-size: 30px;
+            justify-content: center;
+        }
+        span {
+            margin:0px;
+              justify-content: center;
+        }
+        span > a {
+            font-size: 20px;
+            margin:0px;
+        }h3 {
+            margin:0px;
+            padding:5px;
+            text-align: center;
+        }
+        h3 > a {
+            font-size: 20px;
+            margin:0px;
+            padding:0px;
+           
+        }
+        .smallerDisplayOfProducts{  /* A wider division between the banner and the image of the lady looks better.*/
+            padding-bottom:10px;
+        }
+        .article{
+            padding:0px;
+        }
+        .subHeading{
+            margin-top:10px;
+            
+            text-align: right;  /* It's more appealing  with right-align here.*/
+        }
+        .mainText{
+            text-indent: 40px;  /* It looks better with indent here as the text is justified and it would have opened with a gap in the middle*/
+            margin-left:30px;
+        }
+        #smallerScreens{    /* Got rid of the break here to reduce the text's size keeping the font-size.*/
+            display: none;
+        }
+         #readOn > a {
+            margin-bottom:5px;
+            margin-left:10px;
+        }
+        .subHeading2{
+            text-align: left;
+            margin-top:10px;
+        }
+        .recyclablePackagingText{
+            padding-bottom: 5px;
+            text-indent: 30px;
+        }
+        #glassJar2{
+            width:200px;
+            height:auto;
+        }
+        footer{
+            padding-bottom:50px;
+        
+        }
+        .twitter{
+            margin-left:90px;
+        }
+        }
+        @media screen and (max-width: 333px){  /*A few adjustments were needed, text did not look in place and social media icons needed reduced margins again*/
+        
+             .smallerDisplayOfProducts{   /*I have reverted to the first showreel as this one looked too tiny now.*/
+             display: none;
+            }
+             .yoganShowReel{            /*However, I have removed all images but one.*/
+            display:flex;
+            }
+            .yoganShowReel > img{
+            display: none;
+            } 
+               #pots{
+            display:flex;         /* This type of image-display with the cover-fit cut the image at the top and at the bottom and made it a screenwide strip which appeared just right.*/ 
+            object-fit: cover;
+            width: 100%;
+            height: 150px
+            }     
+            .subHeading{
+             text-align: left;
+             margin-left:20px;
+             }
+             #lady2{
+            display:flex;
+            width:140px;
+            height:auto;
+            padding:5px;
+            margin:0px;               
+            }
+       
+       .subHeading{
+           text-align: center;
+         }
+           .mainText{
+            text-indent:0px;
+            margin-left: 20px;
+           }
+        #readOn{
+            margin-left: 10px;
+             }
+        .splitIntoHalves{
+            display:flex;
+            flex-direction: column-reverse;
+        }
+        #glassJar2{
+            display:none;
+        }
+        #glassJar{
+            display:flex;  
+            object-fit: contain;
+            width: 100%;
+            height: 200px;          
+            }
+        .subHeading2{
+            text-align: center;
+        }
+        .recyclablePackagingText{    /* The indent was no longer needed.*/
+            text-indent: 0px;
+        }
+        .contactDetails{
+            line-height: 1.2;
+            padding-top:7px;
+        }
+        .twitter{
+            margin-left:90px;
+        }
+        }
+        @media screen and (max-width: 280px){ /*Galaxy Fold*/
+            .twitter{
+                margin-left:65px;      /*Only the social media icons slid to the right.*/
+            }
+        }
+        @media screen and (max-width: 280px){ /*Nokia 8110*/
+            #lady2{
+                display:none; /*This screensize is so tiny that web-surfing is hardly enjoyable and too many images make the content less conspicuous, hence I have removed this image and only left the product-related two images.*/
+                }
+            .subHeading{
+                text-align: left;
+                }
+            .mainText{
+                text-indent: 40px;
+                }
+            .contactDetails > a{
+                font-size: 14px;   /*This was the smaller font-size I ever wanted to use on the page as anything smaller is too straining on the eyes.*/
+                }
+            .twitter{
+                margin-left: 60px;
+                }
+        }
+
   
-
-
-     
-
-
-
-
-
-  
-  
- 
